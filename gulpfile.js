@@ -3,7 +3,7 @@ var bs = require('browser-sync').create();
 var sass = require('gulp-sass');
 var pump = require('pump');
 
-gulp.task('server', ['sass'], function(){
+gulp.task('server', function(){
     
     bs.init({
         server: {
@@ -11,7 +11,8 @@ gulp.task('server', ['sass'], function(){
         }
     });
 
-    gulp.watch("src/scss/**/*.scss", ['sass']);
+    gulp.watch("src/scss/**/*.scss", ['sass']).on('change', bs.reload);
+    gulp.watch("*.js").on('change', bs.reload);
     gulp.watch("*.html").on('change', bs.reload);
 
 });
