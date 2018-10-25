@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="wooza">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +9,13 @@
 </head>
 <body ng-controller="applicationController">
 
-    <div class="wrapper">
+    <main class="wrapper">
         <div ng-view></div>
-    </div>
+    </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
     <script src="https://code.angularjs.org/1.6.10/angular-route.min.js"></script>
-    <script src="dist/js/App.js"></script>
-    <script src="dist/js/Controllers.js"></script>
+    <script src="src/js/App.js"></script>
+    <script src="src/js/Controllers.js"></script>
 </body>
 </html>
