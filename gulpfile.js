@@ -12,7 +12,7 @@ gulp.task('server', ['sass', 'uglify'], function(){
         }
     });
 
-    gulp.watch("src/scss/*.scss", ['sass']);
+    gulp.watch("src/scss/**/*.scss", ['sass']);
     gulp.watch("src/js/*.js", ['uglify'])
     gulp.watch("*.html").on('change', bs.reload);
 
@@ -20,7 +20,7 @@ gulp.task('server', ['sass', 'uglify'], function(){
 
 gulp.task('sass', function(){
     pump([
-        gulp.src('src/scss/**/*.scss'),
+        gulp.src('src/scss/style.scss'),
         sass({
             outputStyle: 'compressed'
         }).on('error', sass.logError),
