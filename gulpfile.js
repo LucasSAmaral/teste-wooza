@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var bs = require('browser-sync').create();
 var sass = require('gulp-sass');
 var pump = require('pump');
+var wait = require('gulp-wait');
 
 gulp.task('server', function(){
     
@@ -20,6 +21,7 @@ gulp.task('server', function(){
 gulp.task('sass', function(){
     pump([
         gulp.src('src/scss/style.scss'),
+        wait(150),
         sass({
             outputStyle: 'compressed'
         }).on('error', sass.logError),
