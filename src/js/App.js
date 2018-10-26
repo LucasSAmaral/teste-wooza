@@ -1,15 +1,15 @@
 angular.module('wooza', ['ngRoute'])
-    .config(['$routeProvider', '$locationProvider',
-        function($routeProvider, $locationProvider) {
+    .config(['$routeProvider',
+        function($routeProvider) {
             
             $routeProvider
                 .when('/plataforma', {
                     templateUrl: 'template/plataforma.html',
-                    controller: 'applicationController'
+                    controller: 'plataformaController'
                 })
-                .when('/plano', {
+                .when('/plataforma/:planoSKU', {
                     templateUrl: 'template/planos.html',
-                    controller: 'applicationController'
+                    controller: 'planosController'
                 })
                 .when('/dados-pessoais', {
                     templateUrl: 'template/dados-pessoais.html',
