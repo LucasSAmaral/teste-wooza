@@ -31,6 +31,8 @@ gulp
 ```
 O endereço http://localhost:3000/#!/plataforma irá abrir automaticamente no seu navegador.
 
+O teste também está disponível no endereço: https://teste-wooza.netlify.com/#!/plataforma
+
 ### Stack utilizado
 
 Para desenvolver esse teste, usei as seguintes tecnologias:
