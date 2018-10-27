@@ -1,0 +1,9 @@
+<div class="platform__container" ng-controller="plataformaController">
+    <div class="platform__item" ng-repeat="platform in platforms">
+        <p class="platform__name">{{platform.nome}}</p>
+        <p class="platform__description">{{platform.descricao}}</p>
+        <div class="platform__button-container">
+            <a href="#!planos" ng-click="getNamePlatform(platform.nome); getSkuPlatform(platform.sku)" class="button">Selecionar</a>
+        </div>
+    </div>
+</div>
