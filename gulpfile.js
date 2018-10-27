@@ -4,7 +4,7 @@ var sass = require('gulp-sass');
 var pump = require('pump');
 var wait = require('gulp-wait');
 
-gulp.task('server', function(){
+gulp.task('default', function(){
     
     bs.init({
         server: {

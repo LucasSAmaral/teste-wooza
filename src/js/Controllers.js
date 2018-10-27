@@ -68,8 +68,18 @@ angular.module('wooza')
         Scopes.store('dadosPessoaisController', $scope);
 
         $scope.getDados = function() {
-            console.log("Você escolheu a plataforma: " + Scopes.get('plataformaController').nomePlataforma);
-            console.log("Você escolheu o plano: " + Scopes.get('planosController').nomePlano);
+            if ($('#nome').val() && $('#email').val() && $('#nascimento').val() && $('#cpf').val() && $('#telefone').val() != ' ') {
+                console.log("Seu nome é: " + $('#nome').val() + ".");
+                console.log("Seu e-mail é: " + $('#email').val() + ".");
+                console.log("Sua data de nascimento é: " + $('#nascimento').val() + ".");
+                console.log("Seu CPF é: " + $('#cpf').val() + ".");
+                console.log("Seu telefone é: " + $('#telefone').val() + ".");
+                console.log("Você escolheu a plataforma: " + Scopes.get('plataformaController').nomePlataforma);
+                console.log("Você escolheu o plano: " + Scopes.get('planosController').nomePlano);
+            } else {
+                alert("Preencha todos os campos do formulário.");
+            }
+            
         }
 
         $scope.$on('$viewContentLoaded', function() {
