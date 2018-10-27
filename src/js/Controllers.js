@@ -14,7 +14,7 @@ angular.module('wooza')
     })
     .controller('plataformaController', function($scope, $http, Scopes) {
         
-        $http.get("http://private-59658d-celulardireto2017.apiary-mock.com/plataformas")
+        $http.get("https://private-59658d-celulardireto2017.apiary-mock.com/plataformas")
         .then(function (response){
             $scope.platforms = response.data.plataformas;
         })
@@ -37,7 +37,7 @@ angular.module('wooza')
         $scope.sku = Scopes.get('plataformaController').skuPlataforma;
 
         $scope.carregaPlanos = function () {
-            var url = "http://private-59658d-celulardireto2017.apiary-mock.com/planos/" + $scope.sku;
+            var url = "https://private-59658d-celulardireto2017.apiary-mock.com/planos/" + $scope.sku;
             $http.get(url)
                 .then(function(response){
                     $scope.plans = response.data.planos;
