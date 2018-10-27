@@ -3,6 +3,18 @@
         text-align: center;
         font-family: Arial, Helvetica, sans-serif;
 
+        @media (min-width: 320px) and (max-width: 767px) {
+            margin-top: 50px;
+        }
+
+        @media (min-width: 768px) and (max-width: 1023px) {
+            margin-top: calc(35% - 202px); 
+        }
+
+        @media (min-width: 1024px) {
+            margin-top: 0;
+        }
+
         form {
             border: 1px solid #808080;
             border-radius: 5px;
@@ -26,6 +38,9 @@
                 padding: 5px 25px;
                 border: 1px solid #808080;
                 outline: none;
+                display: block;
+                margin: 0 auto;
+                margin-top: 10px;
             }
         }
     }
