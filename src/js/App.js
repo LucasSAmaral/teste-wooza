@@ -7,7 +7,7 @@ angular.module('wooza', ['ngRoute'])
                     templateUrl: 'template/plataforma.html',
                     controller: 'plataformaController'
                 })
-                .when('/plataforma/:planoSKU', {
+                .when('/planos', {
                     templateUrl: 'template/planos.html',
                     controller: 'planosController'
                 })

@@ -24,12 +24,20 @@ angular.module('wooza')
         $scope.getNamePlatform = function(nome) {
             $scope.nomePlataforma = nome;
             return $scope.nomePlataforma;
-        }   
+        }
+
+        $scope.getSkuPlatform = function(sku) {
+            $scope.skuPlataforma = sku;
+            return $scope.skuPlataforma;
+        }
 
     })
-    .controller('planosController', function($scope, $http, $routeParams, Scopes) {
+    .controller('planosController', function($scope, $http, Scopes) {
+
+        $scope.sku = Scopes.get('plataformaController').skuPlataforma;
+
         $scope.carregaPlanos = function () {
-            var url = "http://private-59658d-celulardireto2017.apiary-mock.com/planos/" + $routeParams.planoSKU;
+            var url = "http://private-59658d-celulardireto2017.apiary-mock.com/planos/" + $scope.sku;
             $http.get(url)
                 .then(function(response){
                     $scope.plans = response.data.planos;
