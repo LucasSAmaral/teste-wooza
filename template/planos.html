@@ -1,5 +1,16 @@
-<div ng-controller="planosController">
-    <div ng-repeat="plan in plans">
-        <h1>{{plan.franquia}}</h1>
+<div class="plans__container" ng-controller="planosController">
+    <div class="plans__item" ng-repeat="plan in plans">
+        <p class="plans__name">{{plan.franquia}}</p>
+        <p class="plans__description">R$ {{plan.valor}}</p>
+        <div ng-if="plan.aparelho" class="plans__equipment--container">
+            <p class="plans__equipment--title">Aparelho:</p>
+            <p class="plans__equipment--name">{{plan.aparelho.nome}}</p>
+            <p class="plans__equipment--price">Preço total: R$ {{plan.aparelho.valor}}</p>
+            <p ng-if="plan.aparelho.numeroParcelas > 1" class="plans__equipment--parcel">Número de parcelas: {{plan.aparelho.numeroParcelas}} parcelas</p>
+            <p ng-hide="plan.aparelho.valorParcela == false" class="plans__equipment--value-parcel">Valor das parcelas: R$ {{plan.aparelho.valorParcela}}</p>
+        </div>
+        <div class="plans__button-container">
+            <a href="#!dados-pessoais" class="button">Selecionar</a>
+        </div>
     </div>
 </div>
