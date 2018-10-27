@@ -13,7 +13,7 @@ angular.module('wooza', ['ngRoute'])
                 })
                 .when('/dados-pessoais', {
                     templateUrl: 'template/dados-pessoais.html',
-                    controller: 'applicationController'
+                    controller: 'dadosPessoaisController'
                 });
 
                 $routeProvider.otherwise({

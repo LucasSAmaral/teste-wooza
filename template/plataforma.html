@@ -3,7 +3,7 @@
         <p class="platform__name">{{platform.nome}}</p>
         <p class="platform__description">{{platform.descricao}}</p>
         <div class="platform__button-container">
-            <a href="#!plataforma/{{platform.sku}}" class="button">Selecionar</a>
+            <a href="#!plataforma/{{platform.sku}}" ng-click="getNamePlatform(platform.nome)" class="button">Selecionar</a>
         </div>
     </div>
 </div>

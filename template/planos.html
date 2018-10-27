@@ -10,7 +10,7 @@
             <p ng-hide="plan.aparelho.valorParcela == false" class="plans__equipment--value-parcel">Valor das parcelas: R$ {{plan.aparelho.valorParcela}}</p>
         </div>
         <div class="plans__button-container">
-            <a href="#!dados-pessoais" class="button">Selecionar</a>
+            <a href="#!dados-pessoais" ng-click="getPlanName(plan.franquia)" class="button">Selecionar</a>
         </div>
     </div>
 </div>
