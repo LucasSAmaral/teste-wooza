@@ -4,9 +4,15 @@
     max-width: 1366px;
     width: 100%;
     margin: 0 auto; 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    @media (min-width: 1024px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    @media (min-width: 1200px) {
+        flex-wrap: nowrap;
+    }
  }
  &__item {
     width: 100%;
@@ -15,11 +21,16 @@
     height: auto;
     border: 1px solid #808080;
     border-radius: 5px;
-    margin: 0 20px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
+    @media (min-width: 1024px) {
+        margin: 0 20px;
+    }
  }
  &__button-container {
      text-align: center;
@@ -57,6 +68,7 @@
     }
     &__item {
         padding: 30px;
+        margin-bottom: 30px;
     }
     &__description {
         margin-bottom: 20px;
