@@ -21,7 +21,7 @@ gulp.task('default', function(){
 gulp.task('sass', function(){
     pump([
         gulp.src('src/scss/style.scss'),
-        wait(150),
+        wait(3000),
         sass({
             outputStyle: 'compressed'
         }).on('error', sass.logError),
